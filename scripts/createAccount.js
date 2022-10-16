@@ -1,4 +1,4 @@
-//This is... stuff. I don't know if it's right or not.
+let createBtn = document.getElementById("submit");
 
 function createAccount() {
     var password = document.getElementById("password").value;
@@ -15,7 +15,7 @@ function createAccount() {
         alert("Please Fill All Fields");
     }
     else {
-        $.post('createAccount.php' {
+        $.post('/php/createAccount.php',{
             firstName: firstName,
             lastName: lastName,
                 email: email,
@@ -29,3 +29,7 @@ function createAccount() {
     }
     return false;
 }
+
+createBtn.addEventListener('click', event => {
+    createAccount();
+});
