@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Index</title>
-  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
-  <link rel="stylesheet" href="/styles/Navbar-Centered-Links-icons.css">
-  <link rel="stylesheet" href="/styles/Search-Input-Responsive-with-Icon.css">
+  <link rel="stylesheet" href="styles/Navbar-Centered-Links-icons.css">
+  <link rel="stylesheet" href="styles/Search-Input-Responsive-with-Icon.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
               <div class="user-avatar">
                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
               </div>
-              <h5 class="user-name ">John Doe</h5>
+              <h5 class="user-name ">Create Patient</h5>
             </div>
 
           </div>
@@ -35,7 +35,7 @@
     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
       <div class="card h-100">
         <div class="card-body">
-          <form>
+          <form action="php/createAccount.php" method="post">
             <div class="row gutters">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <h6 class="mb-2 text-primary">Personal Details</h6>
@@ -55,7 +55,7 @@
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="form-group">
                   <label for="birthday">Birthday</label>
-                  <input type="date" class="form-control" name="birthday" id="birthday">
+                  <input type="date" class="form-control" name="dob" id="birthday">
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -70,7 +70,12 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
                 </div>
               </div>
-
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" id="email" placeholder="Password">
+                </div>
+              </div>
             </div>
             <div class="row gutters">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -100,12 +105,18 @@
                   <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip Code">
                 </div>
               </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="zip">Reason for Admission</label>
+                  <input type="text" class="form-control" name="reasonForAdmission" id="reasonForAdmission" placeholder="Reason">
+                </div>
+              </div>
             </div>
             <div class="row gutters">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="text-right">
                   <a class="btn btn-primary" role="button" style="background: rgb(54,194,254);" href="index.html">Cancel</a>
-                  <button type="button" id="submit" name="submit" class="btn btn-primary" onClick="/scripts/createAccount.js">Create Account</button>
+                  <input type="submit" value="submit" class="btn btn-primary">
                 </div>
               </div>
             </div>
