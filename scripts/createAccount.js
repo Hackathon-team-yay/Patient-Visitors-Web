@@ -1,17 +1,21 @@
 let createBtn = document.getElementById("submit");
 
 function createAccount() {
-    var password = document.getElementById("password").value;
+    var password = 'test';
     var email = document.getElementById("email").value;
     var firstName = document.getElementById("firstname").value;
     var lastName = document.getElementById("lastname").value;
+    var birthday = document.getElementById("birthday").value;
     var address = document.getElementById("address").value;
     var city = document.getElementById("city").value;
     var state = document.getElementById("state").value;
     var zip = document.getElementById("zip").value;
     var phone = document.getElementById("phone").value;
+    var reasonForAdmission = 'dead';
+    var numbrtOfVisitors = '3';
+
     var dataString = '&password=' + password + '&email=' + email + '&firstname=' + firstName + '&lastname=' + lastName + '&address=' + address + '&phone=' + phone;
-    if ( password == '' || email == '' || firstName == '' || lastName == '' || address == '' || phone == '') {
+    if ( email == '' || firstName == '' || lastName == '' || address == '' || phone == '') {
         alert("Please Fill All Fields");
     }
     else {
@@ -21,10 +25,13 @@ function createAccount() {
                 email: email,
                 password: password,
                 phone: phone,
+                dob: birthday,
                 address: address,
                 city: city,
                 state: state,
-                zip: zip
+                zip: zip,
+                reasonForAdmission: reasonForAdmission,
+                numbrtOfVisitors: numbrtOfVisitors
         });
     }
     return false;
