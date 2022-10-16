@@ -73,7 +73,7 @@
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" class="form-control" name="password" id="email" placeholder="Password">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                 </div>
               </div>
             </div>
@@ -116,7 +116,24 @@
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="text-right">
                   <a class="btn btn-primary" role="button" style="background: rgb(54,194,254);" href="index.html">Cancel</a>
-                  <input type="submit" value="submit" class="btn btn-primary">
+                  <input type="submit" value="Save Data" class="btn btn-primary">
+                  <input type="button"  class="btn btn-primary" onclick="createAccount();" value="Go to Main Page"/>
+                  <script>
+                    function createAccount() {
+                      var email = document.getElementById("email").value;
+                      var firstName = document.getElementById("firstName").value;
+                      var lastName = document.getElementById("lastname").value;
+                      var phone = document.getElementById("phone").value;
+                      var birthday = document.getElementById("birthday").value;
+                      if(email.length !== 0 && firstName.length !== 0 && lastName.length != 0 && phone.length != 0 && birthday.length != 0){
+                        window.location.href = "main.html";
+                      }
+                      else{
+                        alert("Enter your first name, last name, email, birthday, and phone number");
+                      }
+                    }
+                  </script>
+
                 </div>
               </div>
             </div>
@@ -149,7 +166,7 @@
 </footer>
 <script src="/scripts/bootstrap.min.js"></script>
 <script src="/scripts/agency.js"></script>
-<script src="/scripts/createAccount.js"></script>
+<!--script src="/scripts/createAccount.js"></--script-->
 </body>
 
 </html>
